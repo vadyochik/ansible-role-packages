@@ -1,0 +1,7 @@
+---
+packages_list_redhat:
+  - libsemanage-python
+  - bind-utils
+  - vim-enhanced
+
+packages_pip_list_redhat: []

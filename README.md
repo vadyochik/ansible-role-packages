@@ -12,7 +12,8 @@ Role Variables
 --------------
 
 defaults:
- - **packages_list**: Empty. Should be set at group_vars and host_vars level, or at playbook level.
+ - **packages_list**: List of OS packages to be installed. Should be set at group_vars and host_vars level, or at playbook level (list, default: not set, defaults to [] in tasks).
+ - **packages_pip_list**: List of python PIP packages to be installed. Should be set at group_vars and host_vars level, or at playbook level (list, default: not set, defaults to [] in tasks).
 
 vars:
  - **packages_list_openbsd**: List of mandatory packages for OpenBSD systems (list, default: ['vim--no_x11'])

@@ -3,9 +3,7 @@
   yum:
     name: "{{ item }}"
     state: present
-  with_items:
-    - "{{ packages_list_redhat }}"
-    - "{{ packages_list }}"
+  with_items: "{{ packages_list_redhat + packages_list | default([]) }}"
   tags:
     - pkg
 
@@ -13,9 +11,7 @@
   pip:
     name: "{{ item }}"
     state: present
-  with_items:
-    - "{{ packages_pip_list_redhat }}"
-    - "{{ packages_pip_list | default(omit) }}"
+  with_items: "{{ packages_pip_list_redhat + packages_pip_list | default([]) }}"
   tags:
     - pip
 

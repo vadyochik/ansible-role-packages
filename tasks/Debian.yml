@@ -1,0 +1,21 @@
+---
+- name: Make sure desired packages are installed
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ packages_list_debian }}"
+    - "{{ packages_list }}"
+  tags:
+    - pkg
+
+- name: "Install PIP packages.."
+  pip:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ packages_pip_list_debian }}"
+    - "{{ packages_pip_list | default(omit) }}"
+  tags:
+    - pip
+

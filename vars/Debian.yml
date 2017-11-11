@@ -1,0 +1,5 @@
+---
+packages_list_debian:
+  - sudo
+
+packages_pip_list_debian: []

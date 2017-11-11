@@ -6,5 +6,8 @@
 - include_tasks: RedHat.yml
   when: ansible_os_family == "RedHat"
 
+- include_tasks: Debian.yml
+  when: ansible_os_family == "Debian"
+
 - include_tasks: OpenBSD.yml
   when: ansible_os_family == "OpenBSD"

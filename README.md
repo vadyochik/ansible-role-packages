@@ -15,7 +15,7 @@ defaults:
  - **packages_list**: Empty. Should be set at group_vars and host_vars level.
 
 vars:
- - **packages_list_openbsd***: List of mandatory packages for OpenBSD systems (list, default: ['vim--no_x11'])
+ - **packages_list_openbsd**: List of mandatory packages for OpenBSD systems (list, default: ['vim--no_x11'])
  - **packages_pip_list_openbsd**: List of mandatory PIP packages for OpenBSD systems (list, default: [])
  - **packages_list_redhat**: List of mandatory packages for RedHat-like systems (list, default: ['libsemanage-python', 'bind-utils', 'vim-enhanced'])
  - **packages_pip_list_redhat**: List of mandatory PIP packages for RedHat-like systems (list, default:[])

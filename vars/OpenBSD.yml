@@ -1,5 +1,5 @@
 ---
 packages_list_openbsd:
-  - vim--no_x11
+  - py-pip
 
 packages_pip_list_openbsd: []
